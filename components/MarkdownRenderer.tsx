@@ -38,7 +38,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
       if (listType === 'ul') {
         elements.push(<ul key={listKey} className="list-disc list-inside my-2 pl-4 space-y-1">{listItems}</ul>);
       } else if (listType === 'ol') {
-        elements.push(<ol key={listKey} className="list-decimal list-inside my-2 pl-4 space-y-1">{listItems}</ul>);
+        elements.push(<ol key={listKey} className="list-decimal list-inside my-2 pl-4 space-y-1">{listItems}</ol>);
       }
       listItems = [];
       listType = null;
@@ -93,6 +93,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
         flushList();
         listType = 'ol';
       }
+// FIX: Corrected typo in function name from applyInlineformatting to applyInlineFormatting.
       listItems.push(<li key={index}>{applyInlineFormatting(olMatch[2])}</li>);
       return;
     }
