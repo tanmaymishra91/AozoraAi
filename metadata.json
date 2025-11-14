@@ -1,0 +1,5 @@
+{
+  "name": "AozoraAi",
+  "description": "An AI-powered application to generate, edit, and analyze images using Gemini. It features a professional black-and-white theme and a clean, accessible user interface.",
+  "requestFramePermissions": []
+}
